@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Finn Safaris | Home</title>
+  <link rel="stylesheet" href="det.css" />
+  <style>
+    /* Ensure video and images are uniform */
+    .video-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .video-container video {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .features {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin: 40px 0;
+    }
+
+    .feature-box {
+      flex: 1 1 300px;
+      text-align: center;
+    }
+
+    .feature-box img {
+      width: 100%;
+      max-width: 350px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 10px;
+      display: block;
+      margin: 0 auto 15px auto;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">Finn Safaris</div>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Discover the Beauty of Kenya</h1>
+    <p>Your unforgettable safari adventure begins here with Finn Safaris.</p>
+    <a href="contact.html" class="cta-button">Book a Safari</a>
+  </section>
+
+  <!-- Welcome Section -->
+  <section class="welcome">
+    <h2>Welcome to Finn Safaris</h2>
+    <p>
+      At Finn Safaris, we specialize in providing exceptional safari
+      experiences in the heart of Kenya. Whether you seek thrilling wildlife
+      encounters or peaceful retreats into nature, we craft every journey to
+      your unique desires.
+    </p>
+  </section>
+
+  <!-- Video Section -->
+  <section class="video-section">
+    <h2>Experience the Adventure</h2>
+    <p>Watch a glimpse of what awaits you on our unforgettable safaris.</p>
+    <div class="video-container">
+      <video controls>
+        <source src="IMAGES/safari.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <div class="feature-box">
+      <img src="IMAGES/images-giraffe1.jpg" alt="Guided Tour">
+      <h3>Expert Guided Tours</h3>
+      <p>Enjoy personalized adventures with our experienced local guides.</p>
+    </div>
+    <div class="feature-box">
+      <img src="IMAGES/lion.jpg" alt="Family Safari">
+      <h3>Family-Friendly Safaris</h3>
+      <p>Create memories with your loved ones in Kenya's scenic wilderness.</p>
+    </div>
+    <div class="feature-box">
+      <img src="IMAGES/family.jpg" alt="Photography">
+      <h3>Photography Expeditions</h3>
+      <p>Capture the beauty of Africa's wildlife with our custom tours.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Finn Safaris. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>

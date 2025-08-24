@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us | Finn Safaris</title>
+  <link rel="stylesheet" href="det.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #333;
+      color: white;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header .logo {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-left: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+
+    nav ul li a.active {
+      color: #25d366;
+    }
+
+    .page-header {
+      text-align: center;
+      margin: 40px 20px 20px;
+    }
+
+    .page-header h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+      color: #222;
+    }
+
+    .page-header p {
+      color: #555;
+    }
+
+    .contact-box {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      width: 90%;
+      max-width: 400px;
+      margin: 20px auto;
+      text-align: center;
+    }
+
+    .contact-box h2 {
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+    textarea {
+      width: 100%;
+      height: 100px;
+      margin-bottom: 15px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      resize: none;
+      font-size: 14px;
+    }
+
+    button {
+      width: 100%;
+      background: #25d366;
+      color: white;
+      padding: 12px;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #20b858;
+    }
+
+    .contact-info {
+      margin: 30px auto;
+      max-width: 400px;
+      text-align: left;
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    .contact-info h3 {
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .contact-info p {
+      margin: 6px 0;
+      color: #555;
+    }
+
+    footer {
+      background: #333;
+      color: white;
+      padding: 10px;
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    /* Floating WhatsApp Button */
+    .whatsapp_float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      border-radius: 50%;
+      padding: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      z-index: 1000;
+    }
+
+    .whatsapp_float img {
+      width: 40px;
+      height: 40px;
+    }
+
+    .whatsapp_float:hover {
+      background: #20b858;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">Finn Safaris</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <h1>Contact Us</h1>
+    <p>Ready to start your adventure? We'd love to hear from you!</p>
+  </section>
+
+  <!-- WhatsApp Form -->
+  <div class="contact-box">
+    <h2>Send us a WhatsApp</h2>
+    <textarea id="message" placeholder="Write your message..."></textarea>
+    <button onclick="sendToWhatsApp()">Send via WhatsApp</button>
+  </div>
+
+  <!-- Contact Info -->
+  <div class="contact-info">
+    <h3>Get in Touch</h3>
+    <p><strong>Phone:</strong> +254 710 338 954</p>
+    <p><strong>Location:</strong> Nairobi, Kenya</p>
+  </div>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/254796879196?text=Hello%20Finn%20Safaris%2C%20I%20would%20like%20to%20book%20a%20safari." 
+     class="whatsapp_float" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+         alt="WhatsApp Chat">
+  </a>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Finn Safaris. All rights reserved.</p>
+  </footer>
+
+  <!-- WhatsApp Script -->
+  <script>
+    function sendToWhatsApp() {
+      let message = document.getElementById("message").value;
+      let phoneNumber = "254796879196"; // ✅ Replace with your WhatsApp number
+      if(message.trim() !== ""){
+        let url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+        window.open(url, "_blank");
+      } else {
+        alert("Please type a message first.");
+      }
+    }
+  </script>
+</body>
+</html>
