@@ -27,8 +27,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #0f172a;
-  color: white;
+  background-color: wheat;
+  color:black;
   padding: 15px 30px;
   position: sticky;
   top: 0;
@@ -69,7 +69,7 @@ nav ul li a.active {
 /* Page Header Sections */
 .page-header {
   padding: 60px 40px 30px;
-  background-color: #e2e8f0;
+  background-color: white;
   text-align: center;
 }
 
